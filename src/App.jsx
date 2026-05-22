@@ -50,7 +50,7 @@ function ProfileCard() {
               type="button"
               onClick={() => setStatus((prev) => !prev)}
             >
-              {status ? "Set Offline" : "Set Online"}
+              Set status
             </button>{" "}
             <span>{status ? "Online 🟢" : "Offline 🔴"}</span>
           </p>
