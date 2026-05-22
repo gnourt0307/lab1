@@ -1,0 +1,15 @@
+.profile-card.dark {
+  background-color: #353535;
+  border-color: #383838;
+  color: #f3f3f3;
+}
+
+.profile-card.dark button {
+  background-color: #2d2d2d;
+  border-color: #555;
+  color: #f3f3f3;
+}
+
+.profile-card.dark button:hover {
+  background-color: #4b4b4b;
+}

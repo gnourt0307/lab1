@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #f4f4f4;
+  --card: #ffffff;
+  --card-border: #d9d9d9;
+  --text: #222222;
+  --muted: #444444;
+  --muted-strong: #5a5a5a;
+  --body-text: #4b4b4b;
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 18px 32px rgba(0, 0, 0, 0.12);
+}
+
+body,
+.profile-page {
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+}
+
+.profile-page {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.profile-card {
+  width: min(100%, 420px);
+  position: relative;
+  background-color: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 28px;
+  color: var(--text);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  &.dark {
+    --card: #181818;
+    --card-border: #383838;
+    --text: #f3f3f3;
+    --muted: #d8d8d8;
+    --muted-strong: #d8d8d8;
+    --body-text: #d8d8d8;
+  }
+}
+
+button {
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+  background-color: var(--card);
+  color: var(--text);
+  padding: 8px 14px;
+  cursor: pointer;
+  min-width: 100px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: var(--muted);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.profile-avatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  border: 2px solid #e3e3e3;
+}
+
+.profile-body {
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: -0.02em;
+  }
+
+  .profile-role {
+    margin: 8px 0 20px;
+    color: var(--muted-strong);
+    font-size: 1rem;
+  }
+
+  .profile-summary,
+  .profile-status {
+    margin: 0 0 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+}
+
+.profile-about,
+.profile-hobbies {
+  text-align: left;
+  margin-top: 20px;
+
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+  }
+
+  p,
+  ul {
+    margin: 0;
+    color: var(--body-text);
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+}
