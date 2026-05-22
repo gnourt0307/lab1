@@ -18,8 +18,8 @@ function ProfileCard() {
   const [like, setLike] = useState(0);
 
   return (
-    <main className="profile-page">
-      <section className={`profile-card ${darkMode ? "dark" : ""}`}>
+    <main className={`profile-page ${darkMode ? "dark" : ""}`}>
+      <section className="profile-card">
         <button
           className="theme-toggle"
           type="button"
